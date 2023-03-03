@@ -8,7 +8,7 @@ function calculatePercentage() {
   // Loop through the data and add up the market capitalizations for each category
   for (var i = 0; i < data.length; i++) {
     var category = data[i][0];
-    var marketCap = data[i][1];
+    var marketCap = data[i][3];
     
     // Skip the row if the category is null
     if (!category) {
@@ -25,7 +25,7 @@ function calculatePercentage() {
   // Loop through the data again and calculate the percentage of each asset in its category
   for (var i = 0; i < data.length; i++) {
     var category = data[i][0];
-    var marketCap = data[i][1];
+    var marketCap = data[i][3];
     
     // Skip the row if the category is null
     if (!category) {
@@ -34,7 +34,7 @@ function calculatePercentage() {
     
     var percentage = (marketCap / categoryTotals[category]);
     
-    data[i][2] = percentage;
+    data[i][5] = percentage;
   }
   
   // Write the calculated percentages back to the sheet
