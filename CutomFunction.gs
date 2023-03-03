@@ -21,8 +21,3 @@ function getMarketCap(ticker) {
   //Logger.log(chain)
   return parseFloat(chain.optionChain.result[0].quote.marketCap);
 }
-
-function calculatePerc() {
-  var indexsheet = SpreadsheetApp.getActive().getSheetByName('index_db');
-  Logger.log(indexsheet[1][1]);
-}
