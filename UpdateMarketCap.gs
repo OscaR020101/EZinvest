@@ -34,7 +34,7 @@ function calculatePercentage() {
     
     var percentage = (marketCap / categoryTotals[category]);
     
-    data[i][5] = percentage;
+    data[i][4] = percentage;
   }
   
   // Write the calculated percentages back to the sheet
