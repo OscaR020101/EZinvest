@@ -13,6 +13,7 @@ Welcome to EZinvest, a platform designed to empower early investors and make inv
 ## Repository Contents
 The following files are included in this repository:
 - 'CustomFunction.gs': A script that contains custom functions used in the platform.
+- 'Frontend.gs': A script that contains frontend functions for interacting with the user interface, such as creating menus or handling button clicks.
 - 'UpdateMarketCap.gs': A script that updates market capitalization/ creating indices information and functions.
 - 'appsscript.json': A file that contains the configuration for the Google Apps Script project.
 - 'README.md': This file.
