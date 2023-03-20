@@ -40,3 +40,4 @@ function calculatePercentage() {
   // Write the calculated percentages back to the sheet
   sheet.getDataRange().setValues(data);
 }
+

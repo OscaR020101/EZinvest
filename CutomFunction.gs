@@ -18,6 +18,26 @@ function getMarketCap(ticker) {
   ticker = encodeURI(ticker);
   var response = UrlFetchApp.fetch("https://query2.finance.yahoo.com/v7/finance/options/" + ticker);
   var chain = JSON.parse(response.getContentText());
-  //Logger.log(chain)
-  return parseFloat(chain.optionChain.result[0].quote.marketCap);
+
+  if (chain.optionChain && chain.optionChain.result && chain.optionChain.result[0] && chain.optionChain.result[0].quote) {
+    return parseFloat(chain.optionChain.result[0].quote.marketCap);
+  } else {
+    return 'N/A'; // Return 'N/A' if the API response does not include the required data
+  }
+}
+
+
+function updateMarketCap() {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var dataRange = sheet.getDataRange();
+  var numRows = dataRange.getNumRows();
+
+  // Assuming the first row contains headers, start from the second row
+  for (var i = 2; i <= numRows; i++) {
+    var ticker = sheet.getRange(i, 2).getValue(); // Get the ticker from the second column
+    if (ticker) {
+      var marketCap = getMarketCap(ticker);
+      sheet.getRange(i, 3).setValue(marketCap); // Set the market cap in the third column
+    }
+  }
 }

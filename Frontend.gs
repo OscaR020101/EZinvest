@@ -1,3 +1,11 @@
+// Add a custom menu to the Google Sheet
+function onOpen() {
+  var ui = SpreadsheetApp.getUi();
+  var menu = ui.createMenu('Custom Functions');
+  menu.addItem('Update Market Cap', 'updateMarketCap');
+  menu.addToUi();
+}
+
 function homeButton() {
   goToSheet("Home");
 }
