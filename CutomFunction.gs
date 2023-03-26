@@ -41,3 +41,18 @@ function updateMarketCap() {
     }
   }
 }
+
+function refreshSheet(){
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var sheetName = sheet.getName();
+  var tempName = sheetName + "_temp";
+
+  sheet.setName(tempName);
+  SpreadsheetApp.flush();
+  Utilities.sleep(1000);
+  sheet.setName(sheetName);
+
+  var today = new Date();
+  var formattedDate = Utilities.formatDate(today, Session.getScriptTimeZone(), "MM/dd/yyyy");
+  sheet.getRange(4, 13).setValue(formattedDate);
+}
