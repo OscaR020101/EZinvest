@@ -12,13 +12,16 @@ Welcome to EZinvest, a platform designed to empower early investors and make inv
 
 ## Repository Contents
 The following files are included in this repository:
-- 'CustomFunction.gs': A script that contains custom functions used in the platform. 
-- 'Database_calculation.gs': A script that handles calculations related to the database. 
-- ' Database_price.gs': A script that handles price-related data and functions in the database.
-- 'Frontend.gs': A script that contains frontend functions for interacting with the user interface, such as creating menus or handling button clicks. 
-- 'Transaction.gs': A script that manages transactions within the platform.
-- 'appsscript.json': A file that contains the configuration for the Google Apps Script project. 
-- 'README.md': This file. 
+- 'CustomFunction.gs': A script that contains custom functions used in the platform, including the refreshSheet function to manually reload the sheets and save the data.
+- 'Database_calculation.gs': A script that handles calculations related to the database, updated last month.
+- 'Database_price_v1.gs': A script that handles price-related data and functions in the database, with its final update.
+- 'Frontend.gs': A script that contains frontend functions for interacting with the user interface, such as creating menus or handling button clicks, updated last month.
+- 'Portfolio.gs': A script related to managing the user's portfolio, with its final update.
+- 'Transaction.gs': A script that manages transactions within the platform, with its final update.
+- 'Transaction_test.gs': A script for testing transaction functions, with its final update.
+- 'appsscript.json': A file that contains the configuration for the Google Apps Script project, integrating API, updated last month.
+Getting Started
+- 'README.md': This file
 
 ## Getting Started
 1. Clone the repository to your local machine.
